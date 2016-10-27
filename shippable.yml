@@ -1,0 +1,8 @@
+---
+build:
+  ci:
+    - docker pull resin/resin-base:shippable
+    - docker build --tag resin/resin-base:shippable .
+  on_success:
+    - docker push resin/resin-base:shippable
+
